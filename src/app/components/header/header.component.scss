@@ -216,6 +216,7 @@
 }
 
 .fullsize-carousel {
+  // max-height: 460px;
   .fullsize-carousel-one {
     &:hover {
       .fullsize-carousel-one-sliders {
@@ -230,6 +231,9 @@
       padding: 1rem 0rem 7rem 3rem;
       .fullsize-carousel-one-text-content-wrapper {
         width: 340px;
+        animation-name: slide-in;
+        animation-duration: 400ms;
+        animation-fill-mode: forwards;
         .fullsize-carousel-one-header {
           padding-bottom: 0.8rem;
         }
@@ -289,7 +293,7 @@
         margin: 0rem 0.5rem;
         width: 5px;
         height: 5px;
-        background-color: transparent;
+        background-color: #000000;
         border: 0.5px solid #000000;
         border-radius: 50%;
         &:hover {
@@ -300,6 +304,104 @@
       }
       .fullsize-carousel-one-dot-two {
         @extend .fullsize-carousel-one-dot-one;
+        background-color: transparent;
+      }
+    }
+  }
+  .fullsize-carousel-two {
+    &:hover {
+      .fullsize-carousel-two-slider-left,
+      .fullsize-carousel-two-slider-right {
+        visibility: visible !important;
+      }
+    }
+    position: relative;
+    background-image: url("../../../assets/img/SurfaceKeyBoardRemoved.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .fullsize-carousel-two-grid-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      .fullsize-carousel-two-text-content {
+        padding-top: 10rem;
+        padding-bottom: 8rem;
+        .fullsize-carousel-two-text-content-wrapper {
+          width: 340px;
+          margin: auto;
+          animation-name: slide-in;
+          animation-duration: 400ms;
+          animation-fill-mode: forwards;
+          .fullsize-carousel-two-header {
+            padding-bottom: 0.8rem;
+          }
+          .fullsize-carousel-two-paragraph {
+            padding-bottom: 0.8rem;
+          }
+          .fullsize-carousel-two-button {
+            display: flex;
+            align-items: center;
+            background-color: #000000;
+            padding: 10px 12px;
+            border: none;
+            &:hover {
+              cursor: pointer;
+              a {
+                text-decoration: underline;
+                padding-right: 0.6rem;
+              }
+            }
+            .fullsize-carousel-two-button-link {
+              color: #ffffff;
+              padding-right: 0.5rem;
+              transition: all 200ms ease-in-out;
+            }
+          }
+        }
+      }
+    }
+    .fullsize-carousel-two-slider-left {
+      position: absolute;
+      visibility: hidden;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background-color: #fafafa;
+      border-radius: 50%;
+      border: 1px solid #dbdbdb;
+      &:hover {
+        cursor: pointer;
+        background-color: darken(#fafafa, 5%);
+      }
+    }
+    .fullsize-carousel-two-slider-right {
+      @extend .fullsize-carousel-two-slider-left;
+      right: 0;
+    }
+    .fullsize-carousel-two-navigation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0rem;
+      .fullsize-carousel-two-dot-one {
+        margin: 0rem 0.5rem;
+        width: 5px;
+        height: 5px;
+        background-color: transparent;
+        border: 0.5px solid #000000;
+        border-radius: 50%;
+        &:hover {
+          cursor: pointer;
+          background-color: darken(#fafafa, 5%);
+          box-shadow: 8px 8px 8px -11px rgba(0, 0, 0, 0.5);
+        }
+      }
+      .fullsize-carousel-two-dot-two {
+        @extend .fullsize-carousel-two-dot-one;
         background-color: #000000;
       }
     }
