@@ -1,0 +1,132 @@
+$nav-height: 54px;
+$icon-size: 20px;
+$nav-color: #262626;
+
+.nav {
+  height: $nav-height;
+  white-space: nowrap;
+  a {
+    color: $nav-color;
+    font-size: 14px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .mobile-nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 0.8rem;
+    &-left-content {
+      .mobile-nav-left-list {
+        display: flex;
+        height: 100%;
+        &-item {
+          padding: 0rem 0.3rem;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    &-right-content {
+      .mobile-nav-right-list {
+        display: flex;
+        height: 100%;
+        &-item {
+          padding: 0rem 0.3rem;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .fullsize-nav {
+    padding: 0rem 1rem;
+    height: 100%;
+    display: flex;
+    .fullsize-nav-logo {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .fullsize-nav-main-menu {
+      padding: 0rem 0.5rem;
+      height: 100%;
+      flex: 6;
+      .fullsize-nav-main-menu-list {
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        &-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    .fullsize-nav-sidenav {
+      flex: 3;
+      .fullsize-nav-sidenav-list {
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        &-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .xl-nav {
+    @extend .fullsize-nav;
+    .xl-nav-logo {
+      @extend .fullsize-nav-logo;
+    }
+    .xl-nav-main-menu {
+      @extend .fullsize-nav-main-menu;
+      .xl-nav-main-menu-list {
+        @extend .fullsize-nav-main-menu-list;
+        &-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    .xl-nav-sidenav {
+      @extend .fullsize-nav-sidenav;
+      .xl-nav-sidenav-list {
+        @extend .fullsize-nav-sidenav-list;
+        &-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .xl-nav-sidenav-link {
+            padding-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  width: 108px;
+}
+
+.search-icon,
+.bars-icon,
+.cart-icon,
+.user-icon {
+  width: $icon-size;
+}
+
+.chevron-icon {
+  width: $icon-size * 0.4;
+}

@@ -1,0 +1,325 @@
+.hero {
+  @media (min-width: 1083px) {
+    padding: 0rem 2rem;
+  }
+  .mobile-carousel {
+    .mobile-carousel-one {
+      &:hover {
+        .mobile-carousel-one-sliders {
+          opacity: 1 !important;
+        }
+      }
+      .mobile-carousel-one-image-bg {
+        background-image: url("../../../assets/img/ThreeLaptopsSinglePic.png");
+        background-position: center;
+        background-repeat: none;
+        background-size: cover;
+        .mobile-carousel-one-image {
+          visibility: hidden;
+          width: 100%;
+        }
+      }
+
+      .mobile-carousel-one-text-content {
+        // transform: translateY(-4px);
+        .mobile-carousel-one-sliders {
+          display: flex;
+          justify-content: space-between;
+          padding: 1rem 0.2rem;
+          opacity: 0;
+          transition: all 200ms ease-in-out;
+          .slider-left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: #fafafa;
+            border-radius: 50%;
+            border: 1px solid #dbdbdb;
+            &:hover {
+              cursor: pointer;
+              background-color: darken(#fafafa, 5%);
+              box-shadow: 8px 8px 8px -11px rgba(0, 0, 0, 0.5);
+            }
+          }
+          .slider-right {
+            @extend .slider-left;
+          }
+        }
+        background: #e6e6e6;
+        &-wrapper {
+          animation-name: slide-in;
+          animation-duration: 400ms;
+          animation-fill-mode: forwards;
+          width: 80%;
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 1rem;
+          .mobile-carousel-one-header {
+            text-align: center;
+            padding-bottom: 0.8rem;
+          }
+          .mobile-carousel-one-paragraph {
+            text-align: center;
+            padding-bottom: 0.8rem;
+          }
+          .mobile-carousel-one-button {
+            display: flex;
+            align-items: center;
+            background-color: #000000;
+            padding: 10px 12px;
+            border: none;
+            &:hover {
+              cursor: pointer;
+              a {
+                text-decoration: underline;
+                padding-right: 0.6rem;
+              }
+            }
+            .mobile-carousel-one-button-link {
+              color: #ffffff;
+              padding-right: 0.5rem;
+              transition: all 200ms ease-in-out;
+            }
+          }
+        }
+        .mobile-carousel-one-navigation {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem 0rem;
+          .mobile-carousel-one-dot-one {
+            margin: 0rem 0.5rem;
+            width: 5px;
+            height: 5px;
+            background-color: #000000;
+            border: 0.5px solid #000000;
+            border-radius: 50%;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          .mobile-carousel-one-dot-two {
+            @extend .mobile-carousel-one-dot-one;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile-carousel-two {
+  .mobile-carousel-two-image-bg {
+    background-image: url("../../../assets/img/SurfaceKeyBoardRemoved.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .mobile-carousel-two-image {
+      visibility: hidden;
+      width: 100%;
+    }
+  }
+
+  .mobile-carousel-two-text-content {
+    background-color: #e6e6e6;
+    // transform: translateY(-4px);
+    .mobile-carousel-two-sliders {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0.2rem;
+      // opacity: 0;
+      transition: all 200ms ease-in-out;
+      .mobile-carousel-two-slider-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background-color: #fafafa;
+        border-radius: 50%;
+        border: 1px solid #dbdbdb;
+        &:hover {
+          cursor: pointer;
+          background-color: darken(#fafafa, 5%);
+        }
+      }
+      .mobile-carousel-two-slider-right {
+        @extend .mobile-carousel-two-slider-left;
+      }
+    }
+    .mobile-carousel-two-text-content-wrapper {
+      animation-name: slide-in;
+      animation-duration: 400ms;
+      animation-fill-mode: forwards;
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 1rem;
+      .mobile-carousel-two-header {
+        text-align: center;
+        padding-bottom: 0.8rem;
+      }
+      .mobile-carousel-two-paragraph {
+        text-align: center;
+        padding-bottom: 0.8rem;
+      }
+      .mobile-carousel-two-button {
+        display: flex;
+        align-items: center;
+        background-color: #000000;
+        padding: 10px 12px;
+        border: none;
+        &:hover {
+          cursor: pointer;
+          a {
+            text-decoration: underline;
+            padding-right: 0.6rem;
+          }
+        }
+        .mobile-carousel-two-button-link {
+          color: #ffffff;
+          padding-right: 0.5rem;
+          transition: all 200ms ease-in-out;
+        }
+      }
+    }
+    .mobile-carousel-two-navigation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0rem;
+      .mobile-carousel-two-dot-one {
+        margin: 0rem 0.5rem;
+        width: 5px;
+        height: 5px;
+        background-color: transparent;
+        border: 0.5px solid #000000;
+        border-radius: 50%;
+        &:hover {
+          cursor: pointer;
+          background-color: darken(#fafafa, 5%);
+          box-shadow: 8px 8px 8px -11px rgba(0, 0, 0, 0.5);
+        }
+      }
+      .mobile-carousel-two-dot-two {
+        @extend .mobile-carousel-two-dot-one;
+        background-color: #000000;
+      }
+    }
+  }
+}
+
+.fullsize-carousel {
+  .fullsize-carousel-one {
+    &:hover {
+      .fullsize-carousel-one-sliders {
+        visibility: visible !important;
+      }
+    }
+    background-image: url("../../../assets/img/ThreeLaptopsSinglePic.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .fullsize-carousel-one-text-content {
+      padding: 1rem 0rem 7rem 3rem;
+      .fullsize-carousel-one-text-content-wrapper {
+        width: 340px;
+        .fullsize-carousel-one-header {
+          padding-bottom: 0.8rem;
+        }
+        .fullsize-carousel-one-paragraph {
+          padding-bottom: 0.8rem;
+        }
+        .fullsize-carousel-one-button {
+          display: flex;
+          align-items: center;
+          background-color: #000000;
+          padding: 10px 12px;
+          border: none;
+          &:hover {
+            cursor: pointer;
+            a {
+              text-decoration: underline;
+              padding-right: 0.6rem;
+            }
+          }
+          .fullsize-carousel-one-button-link {
+            color: #ffffff;
+            padding-right: 0.5rem;
+            transition: all 200ms ease-in-out;
+          }
+        }
+      }
+    }
+    .fullsize-carousel-one-sliders {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 11rem;
+      visibility: hidden;
+      .fullsize-carousel-one-slider-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background-color: #fafafa;
+        border-radius: 50%;
+        border: 1px solid #dbdbdb;
+        &:hover {
+          cursor: pointer;
+          background-color: darken(#fafafa, 5%);
+        }
+      }
+      .fullsize-carousel-one-slider-right {
+        @extend .fullsize-carousel-one-slider-left;
+      }
+    }
+    .fullsize-carousel-one-navigation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0rem;
+      .fullsize-carousel-one-dot-one {
+        margin: 0rem 0.5rem;
+        width: 5px;
+        height: 5px;
+        background-color: transparent;
+        border: 0.5px solid #000000;
+        border-radius: 50%;
+        &:hover {
+          cursor: pointer;
+          background-color: darken(#fafafa, 5%);
+          box-shadow: 8px 8px 8px -11px rgba(0, 0, 0, 0.5);
+        }
+      }
+      .fullsize-carousel-one-dot-two {
+        @extend .fullsize-carousel-one-dot-one;
+        background-color: #000000;
+      }
+    }
+  }
+}
+
+.chevron-left-icon-slider,
+.chevron-right-icon-slider {
+  width: 10px;
+}
+.chevron-right-icon {
+  width: 8px;
+  color: #ffffff;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(10%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
